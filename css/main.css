@@ -782,7 +782,10 @@ input[type='submit']:hover {
 
 .column .galleryimage {
     margin-top: 8px;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
 }
 
@@ -1050,6 +1053,48 @@ input[type='submit']:hover {
 
 .livestreamlink {
     flex: 1 0 100%;
+}
+
+#slides{
+  position:relative;
+}
+
+.slideImg{
+  display: none;
+  max-width:200%;
+  height:auto;
+  vertical-align:middle;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -20px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align:baseline;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background: linear-gradient(45deg, #d10300, #216ae0);
 }
 
 #homebotb {
