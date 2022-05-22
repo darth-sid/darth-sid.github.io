@@ -90,7 +90,7 @@ html, body {
 }
 
 .sectionheader {
-    background-image: url('../static/images/gfr-bg-dark.png');
+    background-image: url('../static/images/gfr-bg-plain.png');
     background-size: cover;
     display: flex;
     align-items: center;
