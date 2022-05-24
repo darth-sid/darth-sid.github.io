@@ -1143,7 +1143,8 @@ input[type='submit']:hover {
  .bg{
   background-image: url('../static/images/gfr-bg-plain.png');
   background-attachment: fixed;
-  background-size: contain;
+  background-size: 200vh;
+  background-position: 20vw;
   height: 100vh;
   width: 100vw;
  }
