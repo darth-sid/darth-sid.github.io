@@ -47,8 +47,8 @@ function imageLoop() {
     }
 }
 
-imageLoop();
-
+//imageLoop();
+/*
 let slideI = 1;
 showSlides(slideI);
 
@@ -68,7 +68,7 @@ function showSlides(n){
     slides[i].style.display = "none";
   }
   slides[slideI-1].style.display = "block";
-}
+}*/
 
 
 
@@ -82,3 +82,37 @@ function presentationList(presentationLinks, presentationTitles) {
 }
 
 presentationList(prezLinks, prezTitles);
+
+// gallery
+
+galleryImgs = [
+  "./static/images/gallery/rick1.jpeg",
+  "./static/images/gallery/rick2.jpeg", 
+  "./static/images/gallery/rick3.jpeg",
+  "./static/images/gallery/rick4.jpeg",
+];
+
+const prevPic = document.querySelector(".previous-picture");
+const nextPic = document.querySelector(".next-picture");
+const galleryPic = document.querySelector(".gallery-picture");
+
+let counter = 1;
+prevPic.addEventListener("click", function () {
+  counter -= 1;
+  if (counter < 0) {
+    counter = galleryImgs.length - 1;
+  }
+
+  console.log(galleryImgs[counter]);
+
+  galleryPic.src = galleryImgs[counter];
+});
+
+nextPic.addEventListener("click", function () {
+  counter += 1;
+  if (counter >= galleryImgs.length) {
+    counter = 0;
+  }
+
+  galleryPic.src = galleryImgs[counter];
+});

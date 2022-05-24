@@ -801,6 +801,33 @@ input[type='submit']:hover {
     padding: 0 4px;
 }
 
+/* gallery */
+.gallery-img {
+  height: 100vh;
+  position: relative;
+}
+
+.gallery-picture {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.previous-picture,
+.next-picture {
+  position: absolute;
+  font-size: 2rem;
+}
+
+.previous-picture {
+  top: 50%;
+}
+
+.next-picture {
+  top: 50%;
+  right: 0;
+}
+
 .expand {
     width: 80vw;
 }
@@ -1117,8 +1144,8 @@ input[type='submit']:hover {
   background-image: url('../static/images/gfr-bg-plain.png');
   background-attachment: fixed;
   background-size: contain;
-   height: 100vh;
-   width: 100vw;
+  height: 100vh;
+  width: 100vw;
  }
 
  .fixed {
