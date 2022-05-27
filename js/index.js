@@ -3,6 +3,9 @@ function toggleNav() {
     $("nav").toggleClass("togglednav");
     $(".navlink").toggleClass("animated");
     $(".navlink").toggleClass("slideInLeft");
+    scrollTo(top);
+    if(document.getElementsByTagName('html')[0].style.overflow == "hidden"){document.getElementsByTagName('html')[0].style.overflow = "visible";}
+    else{document.getElementsByTagName('html')[0].style.overflow = "hidden";}
 }
 
 function toggleTeamNav() {
@@ -10,6 +13,8 @@ function toggleTeamNav() {
     $("body").toggleClass("toggledteam");
     $(".teamletter").toggleClass("animated");
     $(".teamletter").toggleClass("slideInLeft");
+    if(document.getElementsByTagName('html')[0].style.overflow == "hidden"){document.getElementsByTagName('html')[0].style.overflow = "visible";}
+    else{document.getElementsByTagName('html')[0].style.overflow = "hidden";}
 }
 
 currentYear = document.getElementById('currentYear');
@@ -46,6 +51,14 @@ function imageLoop() {
       $("#slides").append("<div class=\"slideImg\"><img class=\"galleryimage\" src=\""+basepath+"/"+file+"\"></div>");
     }
 }
+teams = ['A','B','C','K','R','S']
+function populateTeamNav(teamletters){
+  for(i=teamletters.length-1; i >= 0; i--){
+    $(".teamletters").prepend("<a href=\"./teams/" + teamletters[i].toLowerCase() +".html\" class=\"teamletter\"onClick=\"toggleTeamNav()\">" +teamletters[i]+ "</a>");
+  }
+}
+
+populateTeamNav(teams);
 
 //imageLoop();
 /*

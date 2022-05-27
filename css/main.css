@@ -77,6 +77,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    
 }
 
 .site {
@@ -85,12 +86,12 @@ html, body {
     flex-direction: column;
 }
 
+
 .content {
     flex: 1;
 }
 
 .sectionheader {
-    background-image: url('../static/images/gfr-bg-plain.png');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -149,6 +150,17 @@ html, body {
     visibility: visible;
     font-size: auto;
 }
+
+.bg{
+  background-color: black;
+  background-image: url('../static/images/gfr-bg-plain.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+ }
 
 .nospace {
     letter-spacing: 0;
@@ -255,6 +267,7 @@ nav {
 }
 
 nav .overlay {
+    position:fixed;
     width: 0vw;
     height: 100vh;
     background: linear-gradient(45deg, #d10300, #216ae0);
@@ -311,6 +324,7 @@ nav .overlay {
 
 .togglednav .linkbox {
     height: 100vh;
+    
 }
 
 .linkbox {
@@ -773,6 +787,7 @@ input[type='submit']:hover {
     color: #fff;
     letter-spacing: 0.005em;
     line-height: 1.4em;
+    width:50vw;
 }
 
 .learnmorebox {
@@ -885,6 +900,7 @@ input[type='submit']:hover {
     }
 }
 @media only screen and (max-width: 760px) {
+    
     .gaelforce {
         font-size: 2em;
         letter-spacing: 5px;
@@ -934,6 +950,7 @@ input[type='submit']:hover {
     .formlink {
         font-size: 1.2em;
     }
+
 }
 
 @-webkit-keyframes border-gradient-animation {
@@ -1140,16 +1157,8 @@ input[type='submit']:hover {
   padding-bottom: 30vh;
   width:100vw;
 }
- .bg{
-  background-image: url('../static/images/gfr-bg-plain.png');
-  background-attachment: fixed;
-  background-size: 200vh;
-  background-position: 20vw;
-  height: 100vh;
-  width: 100vw;
- }
 
- .fixed {
+.fixed {
    position: fixed;
    bottom:0;
    right:0;
