@@ -51,14 +51,24 @@ function imageLoop() {
       $("#slides").append("<div class=\"slideImg\"><img class=\"galleryimage\" src=\""+basepath+"/"+file+"\"></div>");
     }
 }
-teams = ['A','B','C','K','R','S']
-function populateTeamNav(teamletters){
+teamletters = ['A','B','C','K','R','S']
+function populateTeamNav(){
   for(i=teamletters.length-1; i >= 0; i--){
     $(".teamletters").prepend("<a href=\"./teams/" + teamletters[i].toLowerCase() +".html\" class=\"teamletter\"onClick=\"toggleTeamNav()\">" +teamletters[i]+ "</a>");
   }
 }
 
-populateTeamNav(teams);
+populateTeamNav();
+
+linknames = ['Gallery','Sponsors','Documents/Forms','Contact Us']
+links = ['gallery.html','sponsors.html','document.html','contact.html']
+function populateNav(){
+  for(i=0; i < links.length; i++){
+    $(".links").append("<li class=\"navlink\"><a href=\"./" + links[i] + "\" class=\"link\"onclick=\"toggleNav()\">"+linknames[i]+"</a></li>");
+  }
+}
+
+populateNav()
 
 //imageLoop();
 /*
