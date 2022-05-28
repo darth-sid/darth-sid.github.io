@@ -60,11 +60,11 @@ function populateTeamNav(){
 
 populateTeamNav();
 
-linknames = ['Gallery','Sponsors','Documents/Forms','Contact Us']
-links = ['gallery.html','sponsors.html','document.html','contact.html']
+linknames = ['Gallery','Sponsors','Documents/Forms','Donate','Contact Us']
+links = ['gallery.html','sponsors.html','document.html','donate.html','contact.html']
 function populateNav(){
   for(i=0; i < links.length; i++){
-    $(".links").append("<li class=\"navlink\"><a href=\"./" + links[i] + "\" class=\"link\"onclick=\"toggleNav()\">"+linknames[i]+"</a></li>");
+    $(".links").append("<li class=\"navlink\"><a href=\"../" + links[i] + "\" class=\"link\"onclick=\"toggleNav()\">"+linknames[i]+"</a></li>");
   }
 }
 
