@@ -63,7 +63,7 @@ teamletters = ["A", "B", "C", "K", "R", "S"];
 function populateTeamNav() {
   for (i = teamletters.length - 1; i >= 0; i--) {
     $(".teamletters").prepend(
-      '<a href="./teams/' +
+      '<a href="../' +
         teamletters[i].toLowerCase() +
         '.html" class="teamletter"onClick="toggleTeamNav()">' +
         teamletters[i] +

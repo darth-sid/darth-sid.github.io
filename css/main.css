@@ -161,9 +161,28 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   background-repeat: no-repeat;
+}
+
+.bga {
+  background-image: url("../static/images/gfr-bg-a.jpeg");
+}
+.bgb {
+  background-image: url("../static/images/gfr-bg-b.jpeg");
+}
+.bgc {
+  background-image: url("../static/images/gfr-bg-c.jpeg");
+}
+.bgk {
+  background-image: url("../static/images/gfr-bg-k.jpeg");
+}
+.bgr {
+  background-image: url("../static/images/gfr-bg-r.jpeg");
+}
+.bgs {
+  background-image: url("../static/images/gfr-bg-s.jpeg");
 }
 
 .nospace {
@@ -1424,7 +1443,9 @@ teams
 }
 
 .team-about {
-  background: #191919;
+  background: rgba(0, 0, 0, 0.8);
+  height:51vh;
+  padding-top:1vh;
 }
 
 .team-about-title {
