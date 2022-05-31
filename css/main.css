@@ -1390,6 +1390,10 @@ input[type="submit"]:hover {
   width: 100vw;
 }
 
+.tint{
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
 .fixed {
   position: fixed;
   bottom: 0;
