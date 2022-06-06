@@ -1479,39 +1479,8 @@ teams
 
 /* team gallery */
 
-/* .team-gallery-img-container {
-  max-height: 17rem;
-}
-
-.team-gallery-img {
-  max-height: 100%;
-  object-fit: cover;
-}
-
-@media screen and (min-width: 768px) {
-  .team-gallery-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .team-gallery-img-container {
-    flex: 0 0 50%;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .team-gallery-img-container {
-    flex: 0 0 25%;
-  }
-} */
-
-/*
-=============== 
-Gallery
-===============
-*/
-
 .team-gallery {
-  background-color: pink;
+  background-color: #101010;
 }
 
 .team-gallery-center {
