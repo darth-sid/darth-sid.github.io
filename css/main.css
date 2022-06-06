@@ -1390,7 +1390,7 @@ input[type="submit"]:hover {
   width: 100vw;
 }
 
-.tint{
+.tint {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
@@ -1429,9 +1429,12 @@ teams
 =========
 */
 
+/* team banner */
+
 .team-banner {
   background-color: #101010;
   height: 50vh;
+  /* padding-bottom: 8rem; */
 }
 
 .team-banner-center {
@@ -1446,10 +1449,17 @@ teams
   letter-spacing: 0.25rem;
 }
 
+/* team about */
+
 .team-about {
-  background: rgba(0, 0, 0, 0.8);
-  height:51vh;
-  padding-top:1vh;
+  background-color: #191919;
+  padding: 5rem 0;
+}
+
+.team-about-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 .team-about-title {
@@ -1458,4 +1468,78 @@ teams
 
 .team-about-text {
   min-width: 100%;
+}
+
+@media screen and (max-width: 882px) {
+  .team-name {
+    font-size: 8rem;
+  }
+}
+
+/* team gallery */
+
+/* .team-gallery-img-container {
+  max-height: 17rem;
+}
+
+.team-gallery-img {
+  max-height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .team-gallery-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .team-gallery-img-container {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .team-gallery-img-container {
+    flex: 0 0 25%;
+  }
+} */
+
+/*
+=============== 
+Gallery
+===============
+*/
+
+.team-gallery {
+  background-color: pink;
+}
+
+.team-gallery-center {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.team-gallery-img-container {
+  background-color: var(--clr-primary-5);
+}
+
+.team-gallery-img {
+  display: block;
+  width: 100%;
+  height: 17rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+@media screen and (min-width: 768px) {
+  .team-gallery-center {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .team-gallery-center {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
