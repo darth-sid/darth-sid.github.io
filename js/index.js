@@ -65,7 +65,7 @@ function populateTeamNav() {
     $(".teamletters").prepend(
       '<a href="../' +
         teamletters[i].toLowerCase() +
-        '.html" class="teamletter"onClick="toggleTeamNav()">' +
+        '.html" class="teamletter gradienttext"onClick="toggleTeamNav()">' +
         teamletters[i] +
         "</a>"
     );

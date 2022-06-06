@@ -164,3 +164,9 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.gradienttext {
+  background: -webkit-linear-gradient(45deg, #d10300, #216ae0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
