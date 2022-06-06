@@ -1453,7 +1453,8 @@ teams
 
 .team-about {
   background-color: #191919;
-  padding: 5rem 0;
+  padding-bottom: 5rem;
+  padding-top: 4.5rem;
 }
 
 .team-about-center {
