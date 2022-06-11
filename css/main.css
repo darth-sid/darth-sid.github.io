@@ -1490,10 +1490,13 @@ teams
 
 .team-gallery-img-container {
   background-color: var(--clr-primary-5);
+  border-radius: 0.5rem;
+  margin: 0.5rem;
 }
 
 .team-gallery-img {
   display: block;
+  border-radius: 0.5rem;
   width: 100%;
   height: 17rem;
   -o-object-fit: cover;
@@ -1512,4 +1515,90 @@ teams
   .team-gallery-center {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+/* members */
+
+.team-members {
+  padding: 5rem 0;
+  background-color: #000000;
+}
+
+.team-member {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 100%;
+  position: relative;
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+}
+
+.team-member-side {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s linear;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+  -webkit-transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+.team-member-front {
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.team-member-back {
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  display: grid;
+  place-items: center;
+}
+
+.team-member-info {
+  display: grid;
+  place-items: center;
+  transform: translateY(16%);
+}
+
+.team-member-text {
+  color: #101010;
+  font-family: "Archia", serif;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.team-member:hover .team-member-front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.team-member:hover .team-member-back {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+}
+
+.team-member-photo {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.team-members-center {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(208.4px, 1fr));
+  gap: 3rem 1rem;
 }
