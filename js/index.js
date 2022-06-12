@@ -272,31 +272,122 @@ var imagesA = [
   "././static/images/gfr-bg-s.jpeg",
 ]
 
-function populateGallery(target_class,imageLinks) {
+function populateGalleryD(target_class,imageLinks) {
   for(var i = 0; i < imageLinks.length; i++){
     $(target_class).append("<article class=\"team-gallery-img-container fade-in "+(i%2==0?"a":"b")+"\"><img src=\"" + imageLinks[i] + "\" alt=\"\" class=\"team-gallery-img\"/></article>")
   }
 }
 
-populateGallery(".gallery-main",images);
-populateGallery(".gallery-a",imagesA);
+//populateGallery(".gallery-main",images);
+//populateGallery(".gallery-a",imagesA);
 
-var membersA = [
-  ["././static/images/gfr-bg-c.jpeg","Akshat","Captain"],
-  ["././static/images/gfr-bg-r.jpeg","Akshat","Goon"],
-  ["././static/images/gfr-bg-s.jpeg","Akshat","Goon"],
-  ["././static/images/gfr-bg-dark.png","Akshat","Goon"],
-  ["././static/images/gfr-bg-plain.png","Akshat","Goon"],
-  ["././static/images/gfr.png","Akshat","Goon"]
-]
-
-function populateMembers(target_class,members){
-  for(var i = 0; i < members.length;++i){
-    $(target_class).append("<div class=\"team-member\"><div class=\"team-member-side team-member-front\"><img src="+members[i][0]+" class=\"team-member-photo\"alt=\"\"></div><div class=\"team-member-side team-member-back\"><div class=\"team-member-info\"><p class=\"team-member-text\">"+members[i][1]+"</p><p class=\"team-member-text\">"+members[i][2]+"</p></div></div></div>")
+function populateGallery(target,folder,n){
+  var i = 1;
+  for(var i = 1; i < n+1; ++i){
+    try{
+      $(target).append("<article class=\"team-gallery-img-container fade-in "+(i%2==1?"a":"b")+"\"><object data=\"././static/images/" + folder + "/" + i + ".jpeg\" class=\"team-gallery-img\"><img src=\"././static/images/q.jpeg\" class=\"team-gallery-img\"alt=\"\"></object></article>");
+    }
+    catch(error){
+      break;
+    }
   }
 }
 
-populateMembers("#a-members",membersA);
+function populateMembers(target,members,folder){
+  for(var i = 0; i < members.length;++i){
+    try{
+      $(target).append("<div class=\"team-member\"><div class=\"team-member-side team-member-front\"><object data=\"././static/images/"+folder+"/"+members[i][0]+".jpeg\" class=\"team-member-photo\"><img src=\"././static/images/dummymember.jpeg\" class=\"team-member-photo\"alt=\"\"></object></div><div class=\"team-member-side team-member-back\"><div class=\"team-member-info\"><p class=\"team-member-text\">"+members[i][0] + " " + members[i][1] +"</p><p class=\"team-member-text\">"+members[i][2]+"</p></div></div></div>")
+    }
+    catch(error){
+      $(target).append("<div class=\"team-member\"><div class=\"team-member-side team-member-front\"><img src=\"././static/images/dummymember.jpeg\" class=\"team-member-photo\"alt=\"\"></div><div class=\"team-member-side team-member-back\"><div class=\"team-member-info\"><p class=\"team-member-text\">"+members[i][1]+"</p><p class=\"team-member-text\">"+members[i][2]+"</p></div></div></div>")
+    }
+  }
+}
+
+
+
+/*function FadeInSection(props) {
+  const [isVisible, setVisible] = React.useState(true);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+  return ("<div className={`fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>{props.children}</div>");
+}*/
+
+//======================================================================================================================================================
+//======================================================================================================================================================
+//======================================================================================================================================================
+//======================================================================================================================================================
+//======================================================================================================================================================
+
+var membersA = [
+  ["Akshat","Khandelwal","Captain"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"]
+]
+var membersB = [
+  ["Akshat","Khandelwal","Captain"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"]
+]
+var membersC = [
+  ["Akshat","Khandelwal","Captain"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"]
+]
+var membersK = [
+  ["Akshat","Khandelwal","Captain"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"]
+]
+var membersR = [
+  ["Akshat","Khandelwal","Captain"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"]
+]
+var membersS = [
+  ["Akshat","Khandelwal","Captain"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"],
+  ["Akshat","Goon"]
+]
+
+populateMembers("#members-a",membersA,"members_a");
+populateMembers("#members-b",membersB,"members_b");
+populateMembers("#members-c",membersC,"members_c");
+populateMembers("#members-k",membersK,"members_k");
+populateMembers("#members-r",membersR,"members_r");
+populateMembers("#members-s",membersS,"members_s");
+
+populateGallery("#gallery-a","gallery_a",8);
+populateGallery("#gallery-b","gallery_b",8);
+populateGallery("#gallery-c","gallery_c",8);
+populateGallery("#gallery-k","gallery_k",8);
+populateGallery("#gallery-r","gallery_r",8);
+populateGallery("#gallery-s","gallery_s",8);
+populateGallery(".gallery-main","gallery",120);
 
 const faders = document.querySelectorAll('.fade-in');
 const fadeOptions = {threshold: 0.2};
@@ -315,18 +406,3 @@ const appearOnScroll = new IntersectionObserver (
 faders.forEach(fader =>{
   appearOnScroll.observe(fader);
 })
-
-
-
-/*function FadeInSection(props) {
-  const [isVisible, setVisible] = React.useState(true);
-  const domRef = React.useRef();
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
-    });
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
-  }, []);
-  return ("<div className={`fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>{props.children}</div>");
-}*/

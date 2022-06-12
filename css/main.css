@@ -162,7 +162,7 @@ body {
   /*background: ;*/
   background-image: url("../static/images/gfr.png"), radial-gradient(#05213b,black);
   background-attachment: fixed;
-  background-size:contain;
+  background-size:cover;
   background-position: center;
   height: auto;
   width: 100vw;
@@ -200,24 +200,49 @@ body {
   background-repeat: no-repeat;
 }
 
-.bga {
+.bg.a {
   background-image: url("../static/images/gfr-bg-a.jpeg");
 }
-.bgb {
+.bg.b {
   background-image: url("../static/images/gfr-bg-b.jpeg");
 }
-.bgc {
+.bg.c {
   background-image: url("../static/images/gfr-bg-c.jpeg");
 }
-.bgk {
+.bg.k {
   background-image: url("../static/images/gfr-bg-k.jpeg");
 }
-.bgr {
+.bg.r {
   background-image: url("../static/images/gfr-bg-r.jpeg");
 }
-.bgs {
+.bg.s {
   background-image: url("../static/images/gfr-bg-s.jpeg");
 }
+.memberbg {
+  background-attachment:local;
+  background-size:cover;
+}
+.memberbg.a {
+  background-image: url("../static/images/gfr-bg-k.jpeg");
+}
+.memberbg.b {
+  background-image: url("../static/images/gfr-bg-k.jpeg");
+}
+.memberbg.c {
+  background-image: url("../static/images/gfr-bg-k.jpeg");
+}
+.memberbg.k {
+  background-image: url("../static/images/gfr-bg-k.jpeg");
+}
+.memberbg.r {
+  background-image: url("../static/images/gfr-bg-k.jpeg");
+}
+.memberbg.s {
+  background-image: url("../static/images/gfr-bg-k.jpeg");
+}
+
+
+
 .bgtint {
   background-color: rgba(0, 0, 0, 0.6); /* Tint color */
   background-blend-mode:hue;
@@ -1704,6 +1729,7 @@ teams
 .fade-in.b.is-visible {
   opacity: 1;
   transform: translateY(20px);
+  padding-bottom: 40px;
 }
 
 .topbuffer {
@@ -1732,11 +1758,6 @@ teams
 .teamname {
   padding: 2vh;
   text-align: end;
-}
-
-.forty {
-  width:40vw;
-  height:auto;
 }
 .thirty{
   width:30vw;
