@@ -74,11 +74,10 @@ function populateTeamNav() {
 
 populateTeamNav();
 
-linknames = ["Gallery", "Sponsors", "Documents/Forms", "Donate", "Contact Us"];
+linknames = ["Gallery", "Sponsors", "Donate", "Contact Us"];
 links = [
   "gallery.html",
   "sponsors.html",
-  "document.html",
   "donate.html",
   "contact.html",
 ];
@@ -147,6 +146,7 @@ var prezTitles = [
 ];
 
 function presentationList(presentationLinks, presentationTitles) {
+  $("#debug").append("<li class=\"footnote\">a</li>");
   for (var i = 0; i < presentationLinks.length; i++) {
     $("#presentationList").append(
       '<li class="prezlisting"><a target="_blank" class="generallink" href="' +
@@ -172,7 +172,7 @@ galleryImgs = [
 const nextPic = document.querySelector(".next-picture");
 const galleryPic = document.querySelector(".gallery-picture");
 const prevPic = document.querySelector(".previous-picture");
-
+/*
 let counter = 1;
 prevPic.addEventListener("click", function () {
   counter -= 1;
@@ -192,4 +192,113 @@ nextPic.addEventListener("click", function () {
   }
 
   galleryPic.src = galleryImgs[counter];
-});
+});*/
+/*
+function get_doc(id){
+  $("#debug").append("<li>e</li>");
+  const url = 'https://www.googleapis.com/drive/v3/files/'+id+'?alt=media'
+  if(self.fetch){
+  var setHeaders = new Headers();
+  setHeaders.append('Authorization', 'Bearer ' + authToken.access_token);
+  setHeaders.append('Content-Type', mime);
+
+  var setOptions = {
+      method: 'GET',
+      headers: setHeaders
+  };
+  fetch(url,setOptions)
+      .then(response => { if(response.ok){
+      var reader = response.body.getReader();
+      var decoder = new TextDecoder();
+      reader.read().then(function(result){
+          var data = {}
+          data = decoder.decode(result.value, {stream: !result.done});
+          console.log(data);
+      });
+      }
+      else{
+        $("#debug").append("<p class=\"paragraph\">Response bad</p>");
+        console.log("Response was not ok");
+      }
+      }).catch(error => {
+        $("#debug").append("<p class=\"paragraph\">Response bad</p>");
+        console.log("There is an error " + error.message);
+      });
+  }
+}
+
+get_doc('1R8HiiCwxjgiH9tKQSvKGK4n-Vs2YWGHM3xo10N5DiSU');
+*/
+
+var images = [
+  "././static/images/gfr-bg-a.jpeg",
+  "././static/images/gfr-bg-b.jpeg",
+  "././static/images/gfr-bg-c.jpeg",
+  "././static/images/gfr-bg-dark.png",
+  "././static/images/gfr-bg-k.jpeg",
+  "././static/images/gfr-bg-plain.png",
+  "././static/images/gfr-bg-r.jpeg",
+  "././static/images/gfr-bg-s.jpeg",
+  "././static/images/gfr-bg.png",
+  "././static/images/gfr.png",
+  "././static/images/gfr-bg-a.jpeg",
+  "././static/images/gfr-bg-b.jpeg",
+  "././static/images/gfr-bg-c.jpeg",
+  "././static/images/gfr-bg-dark.png",
+  "././static/images/gfr-bg-k.jpeg",
+  "././static/images/gfr-bg-plain.png",
+  "././static/images/gfr-bg-r.jpeg",
+  "././static/images/gfr-bg-s.jpeg",
+  "././static/images/gfr-bg.png",
+  "././static/images/gfr.png",
+  "././static/images/gfr-bg-a.jpeg",
+  "././static/images/gfr-bg-b.jpeg",
+  "././static/images/gfr-bg-c.jpeg",
+  "././static/images/gfr-bg-dark.png",
+  "././static/images/gfr-bg-k.jpeg",
+  "././static/images/gfr-bg-plain.png",
+  "././static/images/gfr-bg-r.jpeg",
+  "././static/images/gfr-bg-s.jpeg"
+]
+
+function populateGallery(imageLinks) {
+  for(var i = 0; i < imageLinks.length; i++){
+    $(".team-gallery-center").append("<article class=\"team-gallery-img-container fade-in "+(i%2==0?"a":"b")+"\"><img src=\"" + imageLinks[i] + "\" alt=\"\" class=\"team-gallery-img\"/></article>")
+  }
+}
+
+
+populateGallery(images);
+
+const faders = document.querySelectorAll('.fade-in');
+const fadeOptions = {threshold: 0};
+const appearOnScroll = new IntersectionObserver (
+  function(entries, appaearOnScroll) {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting){
+        return;
+      }else{
+        entry.target.classList.add('is-visible');
+        appearOnScroll.unobserve(entry.target);
+      }
+    })
+  }, fadeOptions
+)
+faders.forEach(fader =>{
+  appearOnScroll.observe(fader);
+})
+
+
+
+/*function FadeInSection(props) {
+  const [isVisible, setVisible] = React.useState(true);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+  return ("<div className={`fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>{props.children}</div>");
+}*/
