@@ -261,14 +261,42 @@ var images = [
   "././static/images/gfr-bg-s.jpeg"
 ]
 
-function populateGallery(imageLinks) {
+var imagesA = [
+  "././static/images/gfr-bg-a.jpeg",
+  "././static/images/gfr-bg-b.jpeg",
+  "././static/images/gfr-bg-c.jpeg",
+  "././static/images/gfr-bg-dark.png",
+  "././static/images/gfr-bg-k.jpeg",
+  "././static/images/gfr-bg-plain.png",
+  "././static/images/gfr-bg-r.jpeg",
+  "././static/images/gfr-bg-s.jpeg",
+]
+
+function populateGallery(target_class,imageLinks) {
   for(var i = 0; i < imageLinks.length; i++){
-    $(".team-gallery-center").append("<article class=\"team-gallery-img-container fade-in "+(i%2==0?"a":"b")+"\"><img src=\"" + imageLinks[i] + "\" alt=\"\" class=\"team-gallery-img\"/></article>")
+    $(target_class).append("<article class=\"team-gallery-img-container fade-in "+(i%2==0?"a":"b")+"\"><img src=\"" + imageLinks[i] + "\" alt=\"\" class=\"team-gallery-img\"/></article>")
   }
 }
 
+populateGallery(".gallery-main",images);
+populateGallery(".gallery-a",imagesA);
 
-populateGallery(images);
+var membersA = [
+  ["././static/images/gfr-bg-c.jpeg","Akshat","Captain"],
+  ["././static/images/gfr-bg-r.jpeg","Akshat","Goon"],
+  ["././static/images/gfr-bg-s.jpeg","Akshat","Goon"],
+  ["././static/images/gfr-bg-dark.png","Akshat","Goon"],
+  ["././static/images/gfr-bg-plain.png","Akshat","Goon"],
+  ["././static/images/gfr.png","Akshat","Goon"]
+]
+
+function populateMembers(target_class,members){
+  for(var i = 0; i < members.length;++i){
+    $(target_class).append("<div class=\"team-member\"><div class=\"team-member-side team-member-front\"><img src="+members[i][0]+" class=\"team-member-photo\"alt=\"\"></div><div class=\"team-member-side team-member-back\"><div class=\"team-member-info\"><p class=\"team-member-text\">"+members[i][1]+"</p><p class=\"team-member-text\">"+members[i][2]+"</p></div></div></div>")
+  }
+}
+
+populateMembers("#a-members",membersA);
 
 const faders = document.querySelectorAll('.fade-in');
 const fadeOptions = {threshold: 0.2};

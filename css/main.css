@@ -132,6 +132,7 @@ body {
   padding: 2.5em;
   text-align: center;
   position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .gaelforce {
@@ -158,9 +159,10 @@ body {
 .bg {
   background-color: black;
   /*background-image: url("../static/images/gfr-bg-plain.png");*/
-  background: radial-gradient(#05213b,black);
+  /*background: ;*/
+  background-image: url("../static/images/gfr.png"), radial-gradient(#05213b,black);
   background-attachment: fixed;
-  background-size: cover;
+  background-size:contain;
   background-position: center;
   height: auto;
   width: 100vw;
@@ -216,10 +218,14 @@ body {
 .bgs {
   background-image: url("../static/images/gfr-bg-s.jpeg");
 }
+.bgtint {
+  background-color: rgba(0, 0, 0, 0.6); /* Tint color */
+  background-blend-mode:hue;
+}
 
 .bgstuff {
   background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
   height: auto;
   width: 100vw;
@@ -1420,7 +1426,7 @@ input[type="submit"]:hover {
 }
 
 .readable {
-  margin-top: 50vh;
+  margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
@@ -1433,7 +1439,12 @@ input[type="submit"]:hover {
 }
 
 .tint {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-bottom: 50vh;
+}
+
+.tint2 {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .fixed {
@@ -1474,14 +1485,14 @@ teams
 /* team banner */
 
 .team-banner {
-  background-color: #101010;
+  /*background-color: #101010;*/
   height: 50vh;
   /* padding-bottom: 8rem; */
 }
 
 .team-banner-center {
   height: 100%;
-  display: grid;
+  /*display: grid;*/
   place-items: center;
 }
 
@@ -1489,12 +1500,13 @@ teams
   color: #fff;
   font-size: 10rem;
   letter-spacing: 0.25rem;
+  margin-top: 10vh;
 }
 
 /* team about */
 
 .team-about {
-  background-color: #191919;
+  /*background-color: #191919;*/
   padding-bottom: 5rem;
   padding-top: 4.5rem;
 }
@@ -1522,7 +1534,7 @@ teams
 /* team gallery */
 
 .team-gallery {
-  background-color: #101010;
+  /*background-color: #101010;*/
 }
 
 .team-gallery-center {
@@ -1565,7 +1577,7 @@ teams
 
 .team-members {
   padding: 5rem 0;
-  background-color: #000000;
+  /*background-color: #000000;*/
 }
 
 .team-member {
@@ -1596,11 +1608,14 @@ teams
 .team-member-front {
   border-radius: 100%;
   background-color: #fff;
+  /*box-shadow: 0 0 4px 2px #faebeb;*/
+  border: 2px solid #fff;
 }
 
 .team-member-back {
   background-color: #fff;
   border-radius: 100%;
+  box-shadow: 0 0 5px 1px #fff;
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   display: grid;
@@ -1717,4 +1732,14 @@ div.spacer{
 
 .offset-left10{
   padding-left: 10vw;
+}
+
+.blur {
+  box-shadow: 0 0 5px 10px rgb(0, 0, 0);
+}
+
+.small-grid {
+  width:20%;
+  margin-right:40%;
+  margin-left:40%;
 }
