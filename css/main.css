@@ -165,7 +165,7 @@ body {
   width: 100vw;
   background-repeat: no-repeat;
 }
-.bgg{
+.bgg {
   background-color: black;
   background: linear-gradient(45deg, #161843, #194f70);
   background-attachment: fixed;
@@ -175,7 +175,7 @@ body {
   width: 100vw;
   background-repeat: no-repeat;
 }
-.bg2{
+.bg2 {
   background-color: black;
   background: linear-gradient(45deg, #d10300, #216ae0);
   background-attachment: fixed;
@@ -864,7 +864,7 @@ input[type="submit"]:hover {
   color: #fff;
   letter-spacing: 0.005em;
   line-height: 1.4em;
-  width: 50vw;
+  max-width: 90vw;
 }
 
 .learnmorebox {
@@ -1460,9 +1460,27 @@ teams
 
 /* team banner */
 
+.team-background {
+  background-color: transparent;
+}
+
+.fixed-team-img {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.fixed--picture {
+  height: 100%;
+  width: 100%;
+}
+
 .team-banner {
-  background-color: #101010;
-  height: 50vh;
+  padding-top: 6.5rem;
+  padding-bottom: 4rem;
   /* padding-bottom: 8rem; */
 }
 
@@ -1481,9 +1499,7 @@ teams
 /* team about */
 
 .team-about {
-  background-color: #191919;
-  padding-bottom: 5rem;
-  padding-top: 4.5rem;
+  padding-bottom: 4rem;
 }
 
 .team-about-center {
@@ -1508,11 +1524,12 @@ teams
 
 /* team gallery */
 
-.team-gallery {
+/* .team-gallery {
   background-color: #101010;
-}
+} */
 
-.team-gallery-center {
+.team-gallery-center,
+.team-page-team-gallery-center {
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -1535,7 +1552,8 @@ teams
 }
 
 @media screen and (min-width: 768px) {
-  .team-gallery-center {
+  .team-gallery-center,
+  .team-page-team-gallery-center {
     padding: 5%;
     padding-top: 5%;
     grid-template-columns: 1fr 1fr;
@@ -1543,7 +1561,8 @@ teams
 }
 
 @media screen and (min-width: 992px) {
-  .team-gallery-center {
+  .team-gallery-center,
+  .team-page-team-gallery-center {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
@@ -1551,8 +1570,7 @@ teams
 /* members */
 
 .team-members {
-  padding: 5rem 0;
-  background-color: #000000;
+  padding-top: 3rem;
 }
 
 .team-member {
@@ -1637,7 +1655,6 @@ teams
 .center {
   text-align: center;
 }
-
 
 .fade-in.a {
   opacity: 0;
