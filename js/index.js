@@ -271,7 +271,7 @@ function populateGallery(imageLinks) {
 populateGallery(images);
 
 const faders = document.querySelectorAll('.fade-in');
-const fadeOptions = {threshold: 0};
+const fadeOptions = {threshold: 0.2};
 const appearOnScroll = new IntersectionObserver (
   function(entries, appaearOnScroll) {
     entries.forEach(entry => {
