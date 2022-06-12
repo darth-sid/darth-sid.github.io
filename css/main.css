@@ -132,7 +132,6 @@ body {
   padding: 2.5em;
   text-align: center;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .gaelforce {
@@ -141,7 +140,8 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 20px;
-  font-size: 2.2em;
+  font-size: 5vw;
+  font-weight: 900;
   color: #fff;
 }
 
@@ -157,7 +157,8 @@ body {
 
 .bg {
   background-color: black;
-  background-image: url("../static/images/gfr-bg-plain.png");
+  /*background-image: url("../static/images/gfr-bg-plain.png");*/
+  background: radial-gradient(#05213b,black);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -175,6 +176,17 @@ body {
   width: 100vw;
   background-repeat: no-repeat;
 }
+.bgg2{
+  background-color: black;
+  background: linear-gradient(45deg, #501818, #a0110f);
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
+  height: auto;
+  width: 100vw;
+  background-repeat: no-repeat;
+}
+
 .bg2{
   background-color: black;
   background: linear-gradient(45deg, #d10300, #216ae0);
@@ -977,9 +989,10 @@ input[type="submit"]:hover {
     max-width: 100%;
   }
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1000px) {
   .gaelforce {
-    font-size: 2em;
+    font-size: 10vw;
+    font-weight: 900;
     letter-spacing: 5px;
   }
   .althide {
@@ -1663,4 +1676,45 @@ teams
 
 .topbuffer {
   padding-top: 5%;
+}
+
+.horizontal-stack{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left-align{
+  justify-content: start;
+}
+.right-align{
+  justify-content:end;
+}
+.center-align{
+  justify-content: center;
+}
+
+.center-vert{
+  align-items: center;
+}
+
+.teamname {
+  padding: 2vh;
+  text-align: end;
+}
+
+.forty {
+  width:40vw;
+  height:auto;
+}
+.thirty{
+  width:30vw;
+  height:auto;
+}
+
+div.spacer{
+  height: 5vh;
+}
+
+.offset-left10{
+  padding-left: 10vw;
 }
