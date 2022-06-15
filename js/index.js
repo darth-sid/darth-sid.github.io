@@ -326,52 +326,52 @@ function populateMembers(target,members,folder){
 //======================================================================================================================================================
 
 var membersA = [
-  ["Akshat","Khandelwal","Captain"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"]
+  ["John","Doe","Captain"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
 ]
 var membersB = [
-  ["Akshat","Khandelwal","Captain"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"]
+  ["John","Doe","Captain"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
 ]
 var membersC = [
-  ["Akshat","Khandelwal","Captain"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"]
+  ["John","Doe","Captain"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
 ]
 var membersK = [
-  ["Akshat","Khandelwal","Captain"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"]
+  ["John","Doe","Captain"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
 ]
 var membersR = [
-  ["Akshat","Khandelwal","Captain"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"]
+  ["John","Doe","Captain"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
 ]
 var membersS = [
-  ["Akshat","Khandelwal","Captain"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"],
-  ["Akshat","Goon"]
+  ["John","Doe","Captain"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
+  ["John","Doe","Goon"],
 ]
 
 populateMembers("#members-a",membersA,"members_a");
@@ -387,7 +387,7 @@ populateGallery("#gallery-c","gallery_c",8);
 populateGallery("#gallery-k","gallery_k",8);
 populateGallery("#gallery-r","gallery_r",8);
 populateGallery("#gallery-s","gallery_s",8);
-populateGallery(".gallery-main","gallery",120);
+populateGallery(".gallery-main","gallery",24);
 
 const faders = document.querySelectorAll('.fade-in');
 const fadeOptions = {threshold: 0.2};
