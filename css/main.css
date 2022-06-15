@@ -160,7 +160,7 @@ body {
   background-color: black;
   /*background-image: url("../static/images/gfr-bg-plain.png");*/
   /*background: ;*/
-  background-image: url("../static/images/gfr.png"), radial-gradient(#05213b,black);
+  background-image: url("../static/images/gfr-bg-plain.png"), radial-gradient(#05213b,black);
   background-attachment: fixed;
   background-size:cover;
   background-position: center;
