@@ -296,7 +296,7 @@ function populateGallery(target,folder,n){
 function populateMembers(target,members,folder){
   for(var i = 0; i < members.length;++i){
     try{
-      $(target).append("<div class=\"team-member\"><div class=\"team-member-side team-member-front\"><object data=\"././static/images/"+folder+"/"+members[i][0]+".jpeg\" class=\"team-member-photo\"><img src=\"././static/images/dummymember.jpeg\" class=\"team-member-photo\"alt=\"\"></object></div><div class=\"team-member-side team-member-back\"><div class=\"team-member-info\"><p class=\"team-member-text\">"+members[i][0] + " " + members[i][1] +"</p><p class=\"team-member-text\">"+members[i][2]+"</p></div></div></div>")
+      $(target).append("<div class=\"team-member\"><div class=\"team-member-side team-member-front\"><object data=\"././static/images/"+folder+"/"+ members[i][0] + members[i][1] +".jpg\" class=\"team-member-photo\"><img src=\"././static/images/dummymember.jpeg\" class=\"team-member-photo\"alt=\"\"></object></div><div class=\"team-member-side team-member-back\"><div class=\"team-member-info\"><p class=\"team-member-text\">"+members[i][0] + " " + members[i][1] +"</p><p class=\"team-member-text\">"+members[i][2]+"</p></div></div></div>")
     }
     catch(error){
       $(target).append("<div class=\"team-member\"><div class=\"team-member-side team-member-front\"><img src=\"././static/images/dummymember.jpeg\" class=\"team-member-photo\"alt=\"\"></div><div class=\"team-member-side team-member-back\"><div class=\"team-member-info\"><p class=\"team-member-text\">"+members[i][1]+"</p><p class=\"team-member-text\">"+members[i][2]+"</p></div></div></div>")
@@ -326,36 +326,38 @@ function populateMembers(target,members,folder){
 //======================================================================================================================================================
 
 var membersA = [
-  ["John","Doe","Captain"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
+  ["Akshat","Khandelwal","Captain"],
+  ["Urmil","Mishra","Driver"],
+  ["Anit","Annadi","Programmer"],
+  ["Elliot","Leow","Programmer"],
+  ["Siddharth","Ajay","Programmer"],
+  ["Rushil","Yadavalli","Build Lead"],
+  ["Dhriti","Kamat","Builder"],
+  ["Akhil","Kona","Builder"],
+  ["Jayden","Musset","Builder"],
+  ["Kevin","Geng","Builder"],
 ]
 var membersB = [
-  ["John","Doe","Captain"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
+  ["Jayin","Sampeur","Captain"],
+  ["Katherine","Pask","Goon"],
+  ["Nakul","Soneji","Goon"],
+  ["Tarini","Gurusankar","Goon"],
   ["John","Doe","Goon"],
   ["John","Doe","Goon"],
 ]
 var membersC = [
-  ["John","Doe","Captain"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
+  ["Ankur","Prasad","Captain"],
+  ["Sky","Doe","Goon"],
+  ["Amrith","Krishnakumar","Goon"],
+  ["Rohan","Nihalani","Goon"],
 ]
 var membersK = [
-  ["John","Doe","Captain"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
+  ["Evan","Roche","Captain"],
+  ["Jacob","Jung","Driver"],
+  ["Ayush","","Programmer"],
+  ["Andrew"," ","Programmer/Builder"],
+  ["Aadi","","Docs/Builder"],
+  ["Iji","",""],
 ]
 var membersR = [
   ["John","Doe","Captain"],
@@ -366,14 +368,17 @@ var membersR = [
   ["John","Doe","Goon"],
 ]
 var membersS = [
-  ["John","Doe","Captain"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
+  ["Jeia","So","Captain"],
+  ["Samiksha","","Builder"],
+  ["Aethlyn","","Docs"],
+  ["Jeremy","","Builder/Programmer"],
+  ["Atiksh","","Programmer"],
+  ["Jia","","Programmer/CAD"],
+  ["Vivek","","Builder"],
 ]
 
+//fills member section using member info above and pictures with the corresponding name
+//name the picture as the member's full name
 populateMembers("#members-a",membersA,"members_a");
 populateMembers("#members-b",membersB,"members_b");
 populateMembers("#members-c",membersC,"members_c");
@@ -381,6 +386,9 @@ populateMembers("#members-k",membersK,"members_k");
 populateMembers("#members-r",membersR,"members_r");
 populateMembers("#members-s",membersS,"members_s");
 
+
+//fills gallery sections with 8 pictures from the respective folder
+//name pictures with numbers 
 populateGallery("#gallery-a","gallery_a",8);
 populateGallery("#gallery-b","gallery_b",8);
 populateGallery("#gallery-c","gallery_c",8);
@@ -389,6 +397,7 @@ populateGallery("#gallery-r","gallery_r",8);
 populateGallery("#gallery-s","gallery_s",8);
 populateGallery(".gallery-main","gallery",24);
 
+//fade in animation for images :)
 const faders = document.querySelectorAll('.fade-in');
 const fadeOptions = {threshold: 0.2};
 const appearOnScroll = new IntersectionObserver (

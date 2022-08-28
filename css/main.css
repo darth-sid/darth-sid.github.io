@@ -201,44 +201,45 @@ body {
 }
 
 .bg.a {
-  background-image: url("../static/images/gfr-bg-a.jpeg");
+  background-image: url("../static/images/logo/a.jpeg");
 }
 .bg.b {
-  background-image: url("../static/images/gfr-bg-b.jpeg");
+  background-image: url("../static/images/logo/b.jpeg");
 }
 .bg.c {
-  background-image: url("../static/images/gfr-bg-c.jpeg");
+  background-image: url("../static/images/logo/c.jpeg");
 }
 .bg.k {
   background-image: url("../static/images/gfr-bg-k.jpeg");
 }
 .bg.r {
-  background-image: url("../static/images/gfr-bg-r.jpeg");
+  background-image: url("../static/images/logo/r.jpeg");
 }
 .bg.s {
-  background-image: url("../static/images/gfr-bg-s.jpeg");
+  background-image: url("../static/images/logo/s.jpeg");
 }
 .memberbg {
   background-attachment:local;
   background-size:cover;
 }
 .memberbg.a {
-  background-image: url("../static/images/gfr-bg-k.jpeg");
+  background-attachment: fixed;
 }
 .memberbg.b {
-  background-image: url("../static/images/gfr-bg-k.jpeg");
+  /*background-image: url("../static/images/gfr-bg-c.jpeg");*/
+  background-attachment: fixed;
 }
 .memberbg.c {
-  background-image: url("../static/images/gfr-bg-k.jpeg");
+  background-attachment: fixed;
 }
 .memberbg.k {
-  background-image: url("../static/images/gfr-bg-k.jpeg");
+  background-attachment: fixed;
 }
 .memberbg.r {
-  background-image: url("../static/images/gfr-bg-k.jpeg");
+  background-attachment: fixed;
 }
 .memberbg.s {
-  background-image: url("../static/images/gfr-bg-k.jpeg");
+  background-attachment: fixed;
 }
 
 
