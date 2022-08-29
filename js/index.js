@@ -361,13 +361,13 @@ var membersK = [
 ]
 var membersR = [
   ["Ramanathan","Ramasamy","Captain"],
-  ["Finn","Hofenbitzer","Goon"],
-  ["Mohit","Varikuti","Goon"],
-  ["Cyril","Joby","Goon"],
-  ["Kaushik","Chandolu","Goon"],
-  ["Shaaktiram","Balakumar","Goon"],
-  ["Srish","Nigam","Goon"],
-  ["Anmol","Nayak","Goon"],
+  ["Finn","Hofenbitzer","Programmer"],
+  ["Mohit","Varikuti","Builder/Programmer"],
+  ["Cyril","Joby","Builder/Programmer"],
+  ["Kaushik","Chandolu","Builder/CAD"],
+  ["Shaaktiram","Balakumar","Builder"],
+  ["Srish","Nigam","Builder"],
+  ["Anmol","Nayak","Builder"],
 ]
 var membersS = [
   ["Jeia","So","Captain"],
