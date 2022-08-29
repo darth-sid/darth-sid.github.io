@@ -360,12 +360,14 @@ var membersK = [
   ["Iji","",""],
 ]
 var membersR = [
-  ["John","Doe","Captain"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
-  ["John","Doe","Goon"],
+  ["Ramanathan","Ramasamy","Captain"],
+  ["Finn","Hofenbitzer","Goon"],
+  ["Mohit","Varikuti","Goon"],
+  ["Cyril","Joby","Goon"],
+  ["Kaushik","Chandolu","Goon"],
+  ["Shaaktiram","Balakumar","Goon"],
+  ["Srish","Nigam","Goon"],
+  ["Anmol","Nayak","Goon"],
 ]
 var membersS = [
   ["Jeia","So","Captain"],
